@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  mcp-server:
+    image: mcp-server:latest
+    container_name: mcp-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
+
+  agent-icaria:
+    build: ./agents
+    container_name: icaria-agent
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./agents:/app/agents
+      - ./docs:/app/docs
+      - ./reglas:/app/reglas
+      - ./casos:/app/casos
+    environment:
+      - AGENT_CONFIG=/app/agents/icaria-agent-config.yaml
+      - SPACE_DATA=/app/docs/MEMORIA_AGENTE_ICARIA.md
+
+  detector-texto:
+    build: ./detector_texto
+    container_name: detector-texto
+    ports:
+      - "9100:9100"
+    volumes:
+      - ./detector_texto:/app
+    environment:
+      - FLASK_ENV=production

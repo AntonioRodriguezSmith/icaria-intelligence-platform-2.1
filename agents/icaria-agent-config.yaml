@@ -1,0 +1,11 @@
+name: icaria-agent
+description: Configuración del agente Icaria
+server:
+  host: 0.0.0.0
+  port: ${AGENT_PORT}
+memory:
+  file: /app/docs/MEMORIA_AGENTE_ICARIA.md
+rules_path: /app/reglas
+cases_path: /app/casos
+logging:
+  level: ${LOG_LEVEL}
