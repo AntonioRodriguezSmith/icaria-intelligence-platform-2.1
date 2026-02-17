@@ -3,7 +3,7 @@
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 ![Copilot Spaces](https://img.shields.io/badge/github%20copilot-spaces-brightgreen)
 ![QA](https://img.shields.io/badge/checklist-pass-success)
-![License](https://img.shields.io/badge/license-private-important)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](../LICENSE)
 
 ---
 
