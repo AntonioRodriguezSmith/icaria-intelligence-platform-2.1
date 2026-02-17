@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ICARIA — Analyze UI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <div class="container">
+    <h1>Enviar caso para análisis</h1>
+    <p class="text-muted">Envía texto y recibe el informe generado por el motor de matching.</p>
+
+    <div class="mb-3">
+      <label class="form-label">API Token (opcional)</label>
+      <input id="token" class="form-control" placeholder="Bearer token (si aplica)"/>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Texto del caso</label>
+      <textarea id="text" rows="6" class="form-control" placeholder="Describe la petición o pega el bloque de acciones..."></textarea>
+    </div>
+
+    <div class="mb-3">
+      <button id="send" class="btn btn-primary">Analizar</button>
+      <button id="openReport" class="btn btn-outline-secondary">Abrir último informe (JSON)</button>
+    </div>
+
+    <h3>Resultado</h3>
+    <pre id="result" class="border p-3 bg-light" style="white-space:pre-wrap;max-height:400px;overflow:auto;"></pre>
+  </div>
+
+  <script>
+  const sendBtn = document.getElementById('send');
+  const resEl = document.getElementById('result');
+  const tokenEl = document.getElementById('token');
+  const textEl = document.getElementById('text');
+  const openBtn = document.getElementById('openReport');
+
+  sendBtn.addEventListener('click', async () => {
+    resEl.textContent = 'Enviando...';
+    const token = tokenEl.value.trim();
+    const text = textEl.value.trim();
+    if (!text) { resEl.textContent = 'Introduce texto del caso.'; return; }
+
+    try {
+      const headers = { 'Content-Type': 'application/json' };
+      if (token) headers['Authorization'] = token.startsWith('Bearer') ? token : `Bearer ${token}`;
+
+      const r = await fetch('/analyze', {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ text })
+      });
+
+      const data = await r.json();
+      resEl.textContent = JSON.stringify(data, null, 2);
+    } catch (e) {
+      resEl.textContent = 'Error: ' + e;
+    }
+  });
+
+  openBtn.addEventListener('click', () => {
+    // intenta abrir el informe generado por la API (ruta relativa a la web server que hospeda la UI)
+    window.open('/reports/report-latest-from-api.json', '_blank');
+  });
+  </script>
+</body>
+</html>

@@ -84,6 +84,36 @@ Plataforma digital para analizar y validar operaciones, riesgos y cumplimiento n
 
 ---
 
+	## 🧾 Tablas vs Condiciones (importante)
+
+	Distinción operativa dentro del detector:
+
+	- **Tablas de infraestructura**: son fuentes/almacenamiento y NO deben tratarse como condiciones de negocio. Ejemplos: `KC11`, `DV01`, `Q48`, `VA37`, `PE1601`.
+	- **Condiciones de negocio**: son reglas que consultan o verifican datos contenidos en esas tablas. Ejemplos:
+		- `SALDO_DV01 > X` → consulta `DV01` para verificar saldo
+		- `TIENE_POSICIONES_Q48 >= N` → cuenta posiciones en `Q48`
+		- `TIPO_MOVIMIENTO_VA37 = X` → filtra por tipo en `VA37`
+		- `CANTIDAD_TITULARES = N` → cuenta titulares en `PE1601`
+
+	Mantén esta distinción cuando modeles condiciones en `detector/matching/condiciones_icaria.js`.
+
+	---
+
+	## 📊 Generar informe de gaps (priorización)
+
+	Para generar el informe que lista las condiciones no modeladas por frecuencia (priorización):
+
+	```bash
+	node detector/matching/generate_report.js
+	```
+
+	Salida:
+	- `reports/report-latest.md` — informe en Markdown
+	- `reports/report-latest.json` — informe estructurado (KPIs, condiciones no modeladas)
+
+	Revisa `detector/matching/condiciones_icaria.js` si necesitas actualizar el diccionario de condiciones no modeladas.
+
+
 ## 🔀 CI/CD & GitHub Actions
 
 - Automatización de test, backups y releases gestionada en GitHub Actions.

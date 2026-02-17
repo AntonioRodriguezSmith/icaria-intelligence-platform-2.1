@@ -71,9 +71,9 @@ const CONDICIONES_NO_MODELADAS = {
         keywords: ['test de conveniencia', 'conveniencia', 'complejos', 'conveniente', 'pestaña "tc"']
     },
     'SALDO_DV01': {
-        nombre: 'Saldo en cuenta efectivo DV01',
+        nombre: 'Saldo en cuenta efectivo > X€',
         tabla: 'DV01',
-        keywords: ['saldo', 'dv01', 'cuenta efectivo', '1.000€', '1000€']
+        keywords: ['saldo', 'dv01', '1.000€', '1000€', 'verificar saldo']
     },
     'CANTIDAD_TITULARES': {
         nombre: 'Cantidad de titulares',
@@ -82,7 +82,7 @@ const CONDICIONES_NO_MODELADAS = {
     },
     'TIPO_CUENTA_VALORES': {
         nombre: 'Tipo de cuenta valores',
-        tabla: 'KC11',
+        tabla: 'Q08/VA',
         keywords: ['ebolsa', 'va 00026', 'bs bolsa 10', 'va 00005', 'activo bank']
     },
     'PERFIL_USUARIO': {
@@ -90,15 +90,20 @@ const CONDICIONES_NO_MODELADAS = {
         tabla: 'Desconocida',
         keywords: ['perfil sp', 'perfil tr', 'perfil oro', 'perfil broker', 'perfil ebolsa', 'perfil trader', 'perfil bolsa']
     },
-    'KC11_RELACION': {
-        nombre: 'Relación en KC11',
-        tabla: 'KC11',
-        keywords: ['existe la cuenta valores en la kc11', 'no existe la cuenta valores en la kc11', 'tabla de cuentas relacionadas']
+    'POSICIONES_Q48': {
+        nombre: 'Cantidad de posiciones en cartera',
+        tabla: 'Q48',
+        keywords: ['cantidad de posiciones', 'como referencia q48']
     },
     'POSICIONES_ISIN': {
-        nombre: 'Posiciones ISIN',
+        nombre: 'Posiciones en ISIN específicos',
         tabla: 'Q48',
         keywords: ['isin', 'dchos', 'posición en estos isin']
+    },
+    'TIPOS_MOVIMIENTO_VA37': {
+        nombre: 'Tipos de movimiento VA37',
+        tabla: 'VA37',
+        keywords: ['tipos de movimiento', 'va37', 'pestaña "tipos movimiento"']
     },
     'BLOQUEADO_RIC': {
         nombre: 'Bloqueado por RIC',
@@ -113,7 +118,7 @@ const CONDICIONES_NO_MODELADAS = {
     'AUTORIZADO_BD': {
         nombre: 'Autorizado Banca a Distancia',
         tabla: 'PE70',
-        keywords: ['autorizado', 'banca a distancia', 'mismo que el de banca a distancia']
+        keywords: ['autorizado que sea el mismo que el de banca a distancia', 'autorizado de banca a distancia']
     },
     'REPRESENTANTE_LEGAL': {
         nombre: 'Representante legal menor/incapacitado',
@@ -129,6 +134,31 @@ const CONDICIONES_NO_MODELADAS = {
         nombre: 'Nudo propietario',
         tabla: 'PE1601',
         keywords: ['nudo propietario', "pe1601_codrelpeco = '0014'"]
+    },
+    'CUENTA_DIVISAS': {
+        nombre: 'Cuenta en divisa (no EUR)',
+        tabla: 'DV01',
+        keywords: ['divisa diferente a euros', 'sea en euros']
+    },
+    'MULTIPLES_CUENTAS_EFECTIVO': {
+        nombre: 'Múltiples cuentas de efectivo',
+        tabla: 'DV01',
+        keywords: ['3 cuentas de efectivo', 'más de 1 cuenta relacionada con la dv01']
+    },
+    'FIRMA_INDISTINTA': {
+        nombre: 'Titular con firma indistinta',
+        tabla: 'PE1601',
+        keywords: ['firma indistinta']
+    },
+    'MIFID_NO_IMPRESO': {
+        nombre: 'MIFID no impreso',
+        tabla: 'MF01',
+        keywords: ['no tenga el mifid impreso']
+    },
+    'BSO_ACCESO': {
+        nombre: 'Acceso desde BSO',
+        tabla: 'Externo',
+        keywords: ['desde bso']
     }
 };
 

@@ -1,0 +1,638 @@
+{
+  "generatedAt": "2026-02-17T11:38:48.735Z",
+  "stats": {
+    "total": 20,
+    "conDatos": 13,
+    "sinDatos": 7,
+    "coberturaProm": 47,
+    "modeladas": 0,
+    "parciales": 11,
+    "noModeladas": 2
+  },
+  "casos": [
+    {
+      "numero": 1,
+      "acciones": [
+        "Es persona física (particular).",
+        "Clasificación MIFID: minorista.",
+        "Tiene 1 cuenta de valores.",
+        "Test de capacidad financiera: pendiente / no hecho.",
+        "Productos: complejos; conveniente.",
+        "Verificar saldo en DV01: saldo 1200€.",
+        "Un solo titular."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "ES_PERSONA_FISICA",
+          "nombre": "Es persona física",
+          "parametro": null
+        },
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Capacidad Financiera",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        },
+        {
+          "nombre": "Cantidad de titulares",
+          "tabla": "PE1601"
+        }
+      ],
+      "cobertura": 43,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 2,
+      "acciones": [
+        "Es persona física (particular).",
+        "Clasificación MIFID: minorista.",
+        "Tiene 2 cuentas de valores.",
+        "Test de capacidad financiera: pendiente.",
+        "Test de conveniencia: productos COMPLEJOS y CONVENIENTE.",
+        "Posiciones en cartera (ver Q48).",
+        "Saldo DV01 > 1000€ en euros.",
+        "2 cuentas de valores distintas."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "ES_PERSONA_FISICA",
+          "nombre": "Es persona física",
+          "parametro": null
+        },
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 2
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Capacidad Financiera",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        }
+      ],
+      "cobertura": 50,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 3,
+      "acciones": [
+        "Es persona física.",
+        "Clasificacion MIFID: minorista.",
+        "No tiene cuenta de valores.",
+        "Test CF: no realizado.",
+        "Test TC: no realizado; productos complejos."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        }
+      ],
+      "cobertura": 67,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 4,
+      "acciones": [
+        "Es persona física.",
+        "Clasificación MIFID: profesional.",
+        "Tiene 1 cuenta de valores.",
+        "Test de capacidad financiera: pendiente.",
+        "Test de conveniencia: COMPLEJOS, conveniente.",
+        "Saldo DV01 > 1000€.",
+        "Cantidad de posiciones en cartera."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "P"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Capacidad Financiera",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        },
+        {
+          "nombre": "Cantidad de posiciones en cartera",
+          "tabla": "Q48"
+        }
+      ],
+      "cobertura": 33,
+      "estado": "❌ NO MODELADA"
+    },
+    {
+      "numero": 5,
+      "acciones": [
+        "Es persona física.",
+        "Clasificación MIFID: contraparte elegible.",
+        "Tiene 1 cuenta de valores.",
+        "Test CF: pendiente.",
+        "Test TC: COMPLEJOS y CONVENIENTE.",
+        "Saldo DV01 > 1000€.",
+        "Tipos de movimiento VA37 a revisar."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "C"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        },
+        {
+          "nombre": "Tipos de movimiento VA37",
+          "tabla": "VA37"
+        }
+      ],
+      "cobertura": 40,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 6,
+      "acciones": [
+        "Es persona física.",
+        "Clasificación MIFID: minorista.",
+        "Tiene 1 cuenta de valores.",
+        "Test CF: pendiente.",
+        "Test TC: productos complejos y conveniente.",
+        "Saldo DV01 > 1000€.",
+        "Perfil usuario: SP."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        }
+      ],
+      "cobertura": 50,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 7,
+      "acciones": [
+        "Es persona jurídica (empresa).",
+        "Tipo identificación: CIF.",
+        "Clasificación MIFID: minorista.",
+        "Tiene 1 cuenta de valores.",
+        "Test CF (CIF y autorizado): pendiente.",
+        "Test TC: COMPLEJOS y CONVENIENTE.",
+        "Saldo DV01 > 1000€.",
+        "Un solo titular (CIF).",
+        "Autorizado de banca a distancia."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "ES_PERSONA_JURIDICA",
+          "nombre": "Es persona jurídica",
+          "parametro": null
+        },
+        {
+          "codigo": "TIPO_DE_IDENTIFICACION",
+          "nombre": "Tipo de identificación",
+          "parametro": null
+        },
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        },
+        {
+          "nombre": "Cantidad de titulares",
+          "tabla": "PE1601"
+        },
+        {
+          "nombre": "Autorizado Banca a Distancia",
+          "tabla": "PE70"
+        }
+      ],
+      "cobertura": 50,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 8,
+      "acciones": null,
+      "condicionesModeladas": [],
+      "condicionesNoModeladas": [],
+      "cobertura": 0,
+      "estado": "❌ SIN DATOS"
+    },
+    {
+      "numero": 9,
+      "acciones": null,
+      "condicionesModeladas": [],
+      "condicionesNoModeladas": [],
+      "cobertura": 0,
+      "estado": "❌ SIN DATOS"
+    },
+    {
+      "numero": 10,
+      "acciones": null,
+      "condicionesModeladas": [],
+      "condicionesNoModeladas": [],
+      "cobertura": 0,
+      "estado": "❌ SIN DATOS"
+    },
+    {
+      "numero": 11,
+      "acciones": null,
+      "condicionesModeladas": [],
+      "condicionesNoModeladas": [],
+      "cobertura": 0,
+      "estado": "❌ SIN DATOS"
+    },
+    {
+      "numero": 12,
+      "acciones": [
+        "Es persona física.",
+        "Clasificación MIFID: minorista.",
+        "Tiene 1 cuenta de valores.",
+        "Test CF: pendiente.",
+        "Test TC: COMPLEJOS y CONVENIENTE.",
+        "NO existe relación en KC11.",
+        "Un solo titular."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Cantidad de titulares",
+          "tabla": "PE1601"
+        }
+      ],
+      "cobertura": 50,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 13,
+      "acciones": [
+        "Es persona física.",
+        "Clasificación MIFID: minorista.",
+        "Tiene 1 cuenta de valores y cuenta efectivo relacionada.",
+        "Test CF: pendiente.",
+        "Test TC: COMPLEJOS y CONVENIENTE.",
+        "Saldo DV01 > 1000€."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        }
+      ],
+      "cobertura": 50,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 14,
+      "acciones": [
+        "Es persona física.",
+        "Clasificación MIFID: minorista.",
+        "Tiene cuenta de valores con más de 1 titular.",
+        "Test CF: pendiente.",
+        "Test TC: COMPLEJOS y CONVENIENTE.",
+        "Más de 1 titular.",
+        "Saldo DV01 > 1000€."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        },
+        {
+          "nombre": "Cantidad de titulares",
+          "tabla": "PE1601"
+        }
+      ],
+      "cobertura": 40,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 15,
+      "acciones": [
+        "Es persona física.",
+        "Clasificación MIFID: minorista.",
+        "Tiene cuentas de efectivo múltiples (DV01 relacionadas).",
+        "Test CF: pendiente.",
+        "Test TC: COMPLEJOS y CONVENIENTE.",
+        "Una cuenta con 0€; otra con >1000€.",
+        "Titularidad mixta entre cuentas."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        }
+      ],
+      "cobertura": 33,
+      "estado": "❌ NO MODELADA"
+    },
+    {
+      "numero": 16,
+      "acciones": [
+        "Es persona física.",
+        "Clasificación MIFID: minorista.",
+        "Tiene 3 o más cuentas de valores.",
+        "Test CF: pendiente.",
+        "Test TC: COMPLEJOS y CONVENIENTE.",
+        "Una cuenta con saldo >1000€ en euros.",
+        "Resto cuentas con múltiples DV01 relacionadas."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": ">=3"
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Saldo en cuenta efectivo > X€",
+          "tabla": "DV01"
+        }
+      ],
+      "cobertura": 50,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 17,
+      "acciones": [
+        "Es persona jurídica.",
+        "Tipo identificación: CIF.",
+        "Clasificación MIFID: minorista.",
+        "Tiene 1 cuenta de valores.",
+        "Test CF: pendiente.",
+        "Test TC: COMPLEJOS y CONVENIENTE.",
+        "NO existe relación en KC11.",
+        "Un solo titular CIF.",
+        "Autorizado de banca a distancia."
+      ],
+      "condicionesModeladas": [
+        {
+          "codigo": "ES_PERSONA_JURIDICA",
+          "nombre": "Es persona jurídica",
+          "parametro": null
+        },
+        {
+          "codigo": "TIPO_DE_IDENTIFICACION",
+          "nombre": "Tipo de identificación",
+          "parametro": null
+        },
+        {
+          "codigo": "VALORES_TIPO_CLASIFICACION_MIFID",
+          "nombre": "Clasificación MIFID",
+          "parametro": "M"
+        },
+        {
+          "codigo": "TIENE_CUENTA_VALOR",
+          "nombre": "Tiene cuenta de valores",
+          "parametro": 1
+        }
+      ],
+      "condicionesNoModeladas": [
+        {
+          "nombre": "Test de Conveniencia",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "Cantidad de titulares",
+          "tabla": "PE1601"
+        },
+        {
+          "nombre": "Autorizado Banca a Distancia",
+          "tabla": "PE70"
+        }
+      ],
+      "cobertura": 57,
+      "estado": "⚠️ PARCIAL"
+    },
+    {
+      "numero": 18,
+      "acciones": null,
+      "condicionesModeladas": [],
+      "condicionesNoModeladas": [],
+      "cobertura": 0,
+      "estado": "❌ SIN DATOS"
+    },
+    {
+      "numero": 19,
+      "acciones": null,
+      "condicionesModeladas": [],
+      "condicionesNoModeladas": [],
+      "cobertura": 0,
+      "estado": "❌ SIN DATOS"
+    },
+    {
+      "numero": 20,
+      "acciones": null,
+      "condicionesModeladas": [],
+      "condicionesNoModeladas": [],
+      "cobertura": 0,
+      "estado": "❌ SIN DATOS"
+    }
+  ],
+  "noModeladasFreq": [
+    {
+      "nombre": "Test de Conveniencia",
+      "tabla": "MF1301",
+      "count": 13
+    },
+    {
+      "nombre": "Saldo en cuenta efectivo > X€",
+      "tabla": "DV01",
+      "count": 10
+    },
+    {
+      "nombre": "Cantidad de titulares",
+      "tabla": "PE1601",
+      "count": 5
+    },
+    {
+      "nombre": "Test de Capacidad Financiera",
+      "tabla": "MF1301",
+      "count": 3
+    },
+    {
+      "nombre": "Autorizado Banca a Distancia",
+      "tabla": "PE70",
+      "count": 2
+    },
+    {
+      "nombre": "Cantidad de posiciones en cartera",
+      "tabla": "Q48",
+      "count": 1
+    },
+    {
+      "nombre": "Tipos de movimiento VA37",
+      "tabla": "VA37",
+      "count": 1
+    }
+  ]
+}

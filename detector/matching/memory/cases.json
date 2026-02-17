@@ -1,0 +1,22 @@
+[
+  {
+    "id": "case_1771327893744",
+    "text": "Verificar saldo en dv01: saldo 1000€",
+    "stats": {
+      "total": 1,
+      "conDatos": 1,
+      "sinDatos": 0,
+      "coberturaProm": 0,
+      "modeladas": 0,
+      "parciales": 0,
+      "noModeladas": 1
+    },
+    "condicionesNoModeladas": [
+      {
+        "nombre": "Saldo en cuenta efectivo > X€",
+        "tabla": "DV01"
+      }
+    ],
+    "timestamp": "2026-02-17T11:31:33.744Z"
+  }
+]
