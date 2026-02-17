@@ -1,4 +1,4 @@
-name: icaria-agent
+1º2 name: icaria-agent
 description: Configuración del agente Icaria
 server:
   host: 0.0.0.0
