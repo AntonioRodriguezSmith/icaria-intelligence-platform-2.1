@@ -1,26 +1,28 @@
 # Informe: Análisis de Casos
 
-**Generado:** 2026-02-17T11:38:48.743Z
+**Generado:** 2026-02-17T11:41:24.642Z
 
 ## Estadísticas
 
-- Total casos: 20
-- Con datos: 13
-- Sin datos: 7
-- Cobertura promedio: 47%
-- Modeladas: 0
-- Parciales: 11
-- No modeladas: 2
+- Total casos: 40
+- Con datos: 31
+- Sin datos: 9
+- Cobertura promedio: 49%
+- Modeladas: 1
+- Parciales: 27
+- No modeladas: 3
 
 ## Condiciones no modeladas por frecuencia (priorización)
 
-- **Test de Conveniencia** (tabla: MF1301) — 13 apariciones
-- **Saldo en cuenta efectivo > X€** (tabla: DV01) — 10 apariciones
-- **Cantidad de titulares** (tabla: PE1601) — 5 apariciones
+- **Test de Conveniencia** (tabla: MF1301) — 30 apariciones
+- **Saldo en cuenta efectivo > X€** (tabla: DV01) — 27 apariciones
+- **Cantidad de titulares** (tabla: PE1601) — 9 apariciones
+- **Tipo de cuenta valores** (tabla: Q08/VA) — 7 apariciones
 - **Test de Capacidad Financiera** (tabla: MF1301) — 3 apariciones
 - **Autorizado Banca a Distancia** (tabla: PE70) — 2 apariciones
 - **Cantidad de posiciones en cartera** (tabla: Q48) — 1 apariciones
 - **Tipos de movimiento VA37** (tabla: VA37) — 1 apariciones
+- **Bloqueado por RIC** (tabla: Externo) — 1 apariciones
 
 ## Casos (detallado)
 
@@ -247,6 +249,255 @@
 
 **Cobertura: 0% (0/0 condiciones modeladas)**
 **Estado: ❌ SIN DATOS**
+
+---
+
+**Caso 21:**
+
+
+**Cobertura: 0% (0/0 condiciones modeladas)**
+**Estado: ❌ SIN DATOS**
+
+---
+
+**Caso 22:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Tipo de cuenta valores
+
+**Cobertura: 40% (2/5 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 23:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Tipo de cuenta valores
+
+**Cobertura: 40% (2/5 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 24:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+
+**Cobertura: 50% (2/4 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 25:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+
+**Cobertura: 50% (2/4 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 26:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Tipo de cuenta valores
+
+**Cobertura: 40% (2/5 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 27:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+
+**Cobertura: 50% (2/4 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 28:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Tipo de cuenta valores
+
+**Cobertura: 40% (2/5 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 29:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+
+**Cobertura: 50% (2/4 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 30:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Tipo de cuenta valores
+
+**Cobertura: 40% (2/5 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 31:**
+
+✅ Clasificación MIFID - `VALORES_TIPO_CLASIFICACION_MIFID`
+
+**Cobertura: 100% (1/1 condiciones modeladas)**
+**Estado: ✅ MODELADA**
+
+---
+
+**Caso 32:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Cantidad de titulares
+
+**Cobertura: 40% (2/5 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 33:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Cantidad de titulares
+
+**Cobertura: 40% (2/5 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 34:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Cantidad de titulares
+❌ Bloqueado por RIC
+
+**Cobertura: 33% (2/6 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
+
+---
+
+**Caso 35:**
+
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Cantidad de titulares
+
+**Cobertura: 40% (2/5 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 36:**
+
+
+**Cobertura: 0% (0/0 condiciones modeladas)**
+**Estado: ❌ SIN DATOS**
+
+---
+
+**Caso 37:**
+
+✅ Es persona jurídica - `ES_PERSONA_JURIDICA`
+✅ Tipo de identificación - `TIPO_DE_IDENTIFICACION`
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Tipo de cuenta valores
+
+**Cobertura: 57% (4/7 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 38:**
+
+✅ Es persona jurídica - `ES_PERSONA_JURIDICA`
+✅ Tipo de identificación - `TIPO_DE_IDENTIFICACION`
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+❌ Tipo de cuenta valores
+
+**Cobertura: 57% (4/7 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 39:**
+
+✅ Es persona jurídica - `ES_PERSONA_JURIDICA`
+✅ Tipo de identificación - `TIPO_DE_IDENTIFICACION`
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+
+**Cobertura: 67% (4/6 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
+
+---
+
+**Caso 40:**
+
+✅ Es persona jurídica - `ES_PERSONA_JURIDICA`
+✅ Tipo de identificación - `TIPO_DE_IDENTIFICACION`
+✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
+✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
+❌ Test de Conveniencia
+❌ Saldo en cuenta efectivo > X€
+
+**Cobertura: 67% (4/6 condiciones modeladas)**
+**Estado: ⚠️ PARCIAL**
 
 ---
 

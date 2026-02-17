@@ -6,4 +6,19 @@ memoria_proyecto/
 .venv/
 __pycache__/
 *.pyc
+*.pyo
+.env
+
+# Node
+node_modules/
+
+# Persistencia y reports generados
+detector/matching/memory/
+reports/
+
+# Archivos temporales y OS
+.DS_Store
+
+# Carpeta de archivos obsoletos
+basura/
 
