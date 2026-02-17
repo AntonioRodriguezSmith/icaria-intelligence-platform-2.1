@@ -158,23 +158,55 @@ function detectUnSoloTitular(text) {
 
 function detectSaldoMayorQue(text, amount = 1000) {
     const s = text.toLowerCase();
-    // patrones directos: saldo > 1000, saldo mayor que 1000, >1000
+
+    // patrones directos: 'saldo > 1000', 'saldo mayor que 1000', etc.
     const direct1 = new RegExp(`saldo\\s*[>≥>=]\\s*${amount}`);
     const direct2 = new RegExp(`saldo\\s*(mayor|superior)\\s*(que|a)\\s*${amount}`);
-    const direct3 = new RegExp(`>\\s*${amount}\\b`);
-    if (direct1.test(s) || direct2.test(s) || direct3.test(s)) return true;
+    if (direct1.test(s) || direct2.test(s)) return true;
 
-    // buscar número cerca de la palabra 'saldo'
-    const m = text.match(/saldo[\\s:\-]{0,6}([0-9\\.,€ ]{1,20})/i);
-    if (m) {
-        const n = m[1].replace(/[^0-9]/g, '');
-        const num = parseInt(n || '0', 10);
-        if (!isNaN(num) && num >= amount) return true;
+    // Normalizar y buscar números cercanos a la palabra 'saldo'
+    // Función auxiliar: extrae el primer número significativo de una cadena
+    function parseNumberLikeFragment(fragment) {
+        if (!fragment) return 0;
+        // eliminar símbolos de moneda y espacios
+        const cleaned = fragment.replace(/[€$£\\s]/g, '');
+        // aceptar 1.200, 1,200.50, 1200.50, 1200
+        const numLike = cleaned.match(/[0-9]+(?:[\\.,][0-9]{1,3})*(?:[\\.,][0-9]+)?/);
+        if (!numLike) return 0;
+        let tok = numLike[0];
+        // si contiene comas y puntos, asumir formato '1,234.56' (US)
+        if (tok.indexOf(',') !== -1 && tok.indexOf('.') !== -1) {
+            tok = tok.replace(/,/g, ''); // quitar thousands separator
+        } else if (tok.indexOf('.') !== -1 && tok.indexOf(',') === -1) {
+            // formato con punto decimal o thousands; para nuestro uso interpretamos como integer part
+            tok = tok.replace(/\./g, '');
+        } else if (tok.indexOf(',') !== -1 && tok.indexOf('.') === -1) {
+            // formato europeo '1.200' may be '1,200' -> treat comma as thousands sep
+            tok = tok.replace(/,/g, '');
+        }
+        const n = parseFloat(tok.replace(/[^0-9\\.]/g, '')) || 0;
+        return n;
     }
+
+    // buscar un fragmento cercano a 'saldo'
+    const m = text.match(/saldo[\\s:\-]{0,6}([0-9\\.,€ ]{1,30})/i);
+    if (m) {
+        const candidate = m[1];
+        const num = parseNumberLikeFragment(candidate);
+        if (num >= amount) return true;
+    }
+
+    // Si no hay 'saldo' explícito, buscar patrones genéricos con monedas cercanas
+    const anyNum = text.match(/([0-9][0-9\\., ]{0,20}[0-9])\\s*(€|EUR|eur|€)/i);
+    if (anyNum) {
+        const num = parseNumberLikeFragment(anyNum[1]);
+        if (num >= amount) return true;
+    }
+
     return false;
 }
 
 // Exportar
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { analizarCaso };
+    module.exports = { analizarCaso, detectTestCapacidadFinanciera, detectTestConveniencia, detectUnSoloTitular, detectSaldoMayorQue };
 }

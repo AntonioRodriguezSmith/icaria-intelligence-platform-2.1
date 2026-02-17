@@ -18,5 +18,95 @@
       }
     ],
     "timestamp": "2026-02-17T11:31:33.744Z"
+  },
+  {
+    "id": "case_1771331935957",
+    "text": "Cliente solicita transferir 1.200? desde cuenta corriente",
+    "stats": {
+      "total": 1,
+      "conDatos": 1,
+      "sinDatos": 0,
+      "coberturaProm": 0,
+      "modeladas": 0,
+      "parciales": 0,
+      "noModeladas": 1
+    },
+    "condicionesNoModeladas": [],
+    "timestamp": "2026-02-17T12:38:55.957Z"
+  },
+  {
+    "id": "case_1771331989961",
+    "text": "Cliente indica saldo: 1.200?",
+    "stats": {
+      "total": 1,
+      "conDatos": 1,
+      "sinDatos": 0,
+      "coberturaProm": 0,
+      "modeladas": 0,
+      "parciales": 0,
+      "noModeladas": 1
+    },
+    "condicionesNoModeladas": [
+      {
+        "nombre": "Saldo en cuenta efectivo > X€",
+        "tabla": "DV01"
+      }
+    ],
+    "timestamp": "2026-02-17T12:39:49.961Z"
+  },
+  {
+    "id": "case_1771331990293",
+    "text": "Saldo en cuenta: 1,200.50 EUR",
+    "stats": {
+      "total": 1,
+      "conDatos": 1,
+      "sinDatos": 0,
+      "coberturaProm": 0,
+      "modeladas": 0,
+      "parciales": 0,
+      "noModeladas": 1
+    },
+    "condicionesNoModeladas": [
+      {
+        "nombre": "Saldo en cuenta efectivo > X€",
+        "tabla": "DV01"
+      }
+    ],
+    "timestamp": "2026-02-17T12:39:50.293Z"
+  },
+  {
+    "id": "case_1771331990610",
+    "text": "Indica saldo 1200 euros",
+    "stats": {
+      "total": 1,
+      "conDatos": 1,
+      "sinDatos": 0,
+      "coberturaProm": 0,
+      "modeladas": 0,
+      "parciales": 0,
+      "noModeladas": 1
+    },
+    "condicionesNoModeladas": [
+      {
+        "nombre": "Saldo en cuenta efectivo > X€",
+        "tabla": "DV01"
+      }
+    ],
+    "timestamp": "2026-02-17T12:39:50.610Z"
+  },
+  {
+    "id": "case_1771331990939",
+    "text": "Transferencia de 900? solicitada",
+    "stats": {
+      "total": 1,
+      "conDatos": 1,
+      "sinDatos": 0,
+      "coberturaProm": 0,
+      "modeladas": 0,
+      "parciales": 0,
+      "noModeladas": 1
+    },
+    "condicionesNoModeladas": [],
+    "timestamp": "2026-02-17T12:39:50.939Z"
   }
 ]

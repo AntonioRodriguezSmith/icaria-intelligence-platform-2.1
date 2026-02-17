@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-02-17T11:41:24.635Z",
+  "generatedAt": "2026-02-17T12:35:48.824Z",
   "stats": {
     "total": 40,
     "conDatos": 31,
     "sinDatos": 9,
-    "coberturaProm": 49,
+    "coberturaProm": 32,
     "modeladas": 1,
-    "parciales": 27,
-    "noModeladas": 3
+    "parciales": 6,
+    "noModeladas": 24
   },
   "casos": [
     {
@@ -54,10 +54,22 @@
         {
           "nombre": "Cantidad de titulares",
           "tabla": "PE1601"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTA_UN_SOLO_TITULAR",
+          "tabla": "CUENTAS"
         }
       ],
-      "cobertura": 43,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 30,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 2,
@@ -100,10 +112,22 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 33,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 3,
@@ -130,9 +154,17 @@
         {
           "nombre": "Test de Conveniencia",
           "tabla": "MF1301"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
         }
       ],
-      "cobertura": 67,
+      "cobertura": 40,
       "estado": "⚠️ PARCIAL"
     },
     {
@@ -174,9 +206,21 @@
         {
           "nombre": "Cantidad de posiciones en cartera",
           "tabla": "Q48"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 33,
+      "cobertura": 22,
       "estado": "❌ NO MODELADA"
     },
     {
@@ -214,10 +258,22 @@
         {
           "nombre": "Tipos de movimiento VA37",
           "tabla": "VA37"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 25,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 6,
@@ -250,10 +306,22 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 29,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 7,
@@ -306,10 +374,26 @@
         {
           "nombre": "Autorizado Banca a Distancia",
           "tabla": "PE70"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTA_UN_SOLO_TITULAR",
+          "tabla": "CUENTAS"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 33,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 8,
@@ -374,10 +458,22 @@
         {
           "nombre": "Cantidad de titulares",
           "tabla": "PE1601"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTA_UN_SOLO_TITULAR",
+          "tabla": "CUENTAS"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 29,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 13,
@@ -409,10 +505,22 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 29,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 14,
@@ -449,10 +557,22 @@
         {
           "nombre": "Cantidad de titulares",
           "tabla": "PE1601"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 25,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 15,
@@ -480,9 +600,21 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 33,
+      "cobertura": 17,
       "estado": "❌ NO MODELADA"
     },
     {
@@ -516,10 +648,22 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 29,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 17,
@@ -568,9 +712,21 @@
         {
           "nombre": "Autorizado Banca a Distancia",
           "tabla": "PE70"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTA_UN_SOLO_TITULAR",
+          "tabla": "CUENTAS"
         }
       ],
-      "cobertura": 57,
+      "cobertura": 40,
       "estado": "⚠️ PARCIAL"
     },
     {
@@ -641,10 +797,22 @@
         {
           "nombre": "Tipo de cuenta valores",
           "tabla": "Q08/VA"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 25,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 23,
@@ -682,10 +850,22 @@
         {
           "nombre": "Tipo de cuenta valores",
           "tabla": "Q08/VA"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 25,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 24,
@@ -718,10 +898,22 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 29,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 25,
@@ -754,10 +946,22 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 29,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 26,
@@ -796,10 +1000,22 @@
         {
           "nombre": "Tipo de cuenta valores",
           "tabla": "Q08/VA"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 25,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 27,
@@ -832,10 +1048,22 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 29,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 28,
@@ -873,10 +1101,22 @@
         {
           "nombre": "Tipo de cuenta valores",
           "tabla": "Q08/VA"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 25,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 29,
@@ -909,10 +1149,22 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 50,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 29,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 30,
@@ -950,10 +1202,22 @@
         {
           "nombre": "Tipo de cuenta valores",
           "tabla": "Q08/VA"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 25,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 31,
@@ -1007,10 +1271,26 @@
         {
           "nombre": "Cantidad de titulares",
           "tabla": "PE1601"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTA_UN_SOLO_TITULAR",
+          "tabla": "CUENTAS"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 22,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 33,
@@ -1047,10 +1327,26 @@
         {
           "nombre": "Cantidad de titulares",
           "tabla": "PE1601"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTA_UN_SOLO_TITULAR",
+          "tabla": "CUENTAS"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 22,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 34,
@@ -1092,9 +1388,25 @@
         {
           "nombre": "Bloqueado por RIC",
           "tabla": "Externo"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTA_UN_SOLO_TITULAR",
+          "tabla": "CUENTAS"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 33,
+      "cobertura": 20,
       "estado": "❌ NO MODELADA"
     },
     {
@@ -1134,10 +1446,22 @@
         {
           "nombre": "Cantidad de titulares",
           "tabla": "PE1601"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 40,
-      "estado": "⚠️ PARCIAL"
+      "cobertura": 25,
+      "estado": "❌ NO MODELADA"
     },
     {
       "numero": 36,
@@ -1196,9 +1520,21 @@
         {
           "nombre": "Tipo de cuenta valores",
           "tabla": "Q08/VA"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 57,
+      "cobertura": 40,
       "estado": "⚠️ PARCIAL"
     },
     {
@@ -1250,9 +1586,21 @@
         {
           "nombre": "Tipo de cuenta valores",
           "tabla": "Q08/VA"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 57,
+      "cobertura": 40,
       "estado": "⚠️ PARCIAL"
     },
     {
@@ -1297,9 +1645,21 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 67,
+      "cobertura": 44,
       "estado": "⚠️ PARCIAL"
     },
     {
@@ -1344,9 +1704,21 @@
         {
           "nombre": "Saldo en cuenta efectivo > X€",
           "tabla": "DV01"
+        },
+        {
+          "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "TEST_DE_CONVENIENCIA",
+          "tabla": "MF1301"
+        },
+        {
+          "nombre": "CUENTAS.SALDO_MAYOR_1000",
+          "tabla": "DV01"
         }
       ],
-      "cobertura": 67,
+      "cobertura": 44,
       "estado": "⚠️ PARCIAL"
     }
   ],
@@ -1357,14 +1729,34 @@
       "count": 30
     },
     {
+      "nombre": "VALORES.TEST_CAPACIDAD_FINANCIERA",
+      "tabla": "MF1301",
+      "count": 30
+    },
+    {
+      "nombre": "TEST_DE_CONVENIENCIA",
+      "tabla": "MF1301",
+      "count": 30
+    },
+    {
       "nombre": "Saldo en cuenta efectivo > X€",
       "tabla": "DV01",
       "count": 27
     },
     {
+      "nombre": "CUENTAS.SALDO_MAYOR_1000",
+      "tabla": "DV01",
+      "count": 26
+    },
+    {
       "nombre": "Cantidad de titulares",
       "tabla": "PE1601",
       "count": 9
+    },
+    {
+      "nombre": "CUENTA_UN_SOLO_TITULAR",
+      "tabla": "CUENTAS",
+      "count": 7
     },
     {
       "nombre": "Tipo de cuenta valores",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-17T11:31:33.749Z",
+  "generated_at": "2026-02-17T12:39:50.941Z",
   "stats": {
     "total": 1,
     "conDatos": 1,
@@ -13,20 +13,15 @@
     {
       "numero": 1,
       "acciones": [
-        "Verificar saldo en dv01: saldo 1000€"
+        "Transferencia de 900? solicitada"
       ],
       "condicionesModeladas": [],
-      "condicionesNoModeladas": [
-        {
-          "nombre": "Saldo en cuenta efectivo > X€",
-          "tabla": "DV01"
-        }
-      ],
+      "condicionesNoModeladas": [],
       "cobertura": 0,
       "estado": "❌ NO MODELADA"
     }
   ],
   "memory_counts": {
-    "Saldo en cuenta efectivo > X€": 1
+    "Saldo en cuenta efectivo > X€": 4
   }
 }

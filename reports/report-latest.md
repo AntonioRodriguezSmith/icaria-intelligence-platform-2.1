@@ -1,22 +1,26 @@
 # Informe: Análisis de Casos
 
-**Generado:** 2026-02-17T11:41:24.642Z
+**Generado:** 2026-02-17T12:35:48.831Z
 
 ## Estadísticas
 
 - Total casos: 40
 - Con datos: 31
 - Sin datos: 9
-- Cobertura promedio: 49%
+- Cobertura promedio: 32%
 - Modeladas: 1
-- Parciales: 27
-- No modeladas: 3
+- Parciales: 6
+- No modeladas: 24
 
 ## Condiciones no modeladas por frecuencia (priorización)
 
 - **Test de Conveniencia** (tabla: MF1301) — 30 apariciones
+- **VALORES.TEST_CAPACIDAD_FINANCIERA** (tabla: MF1301) — 30 apariciones
+- **TEST_DE_CONVENIENCIA** (tabla: MF1301) — 30 apariciones
 - **Saldo en cuenta efectivo > X€** (tabla: DV01) — 27 apariciones
+- **CUENTAS.SALDO_MAYOR_1000** (tabla: DV01) — 26 apariciones
 - **Cantidad de titulares** (tabla: PE1601) — 9 apariciones
+- **CUENTA_UN_SOLO_TITULAR** (tabla: CUENTAS) — 7 apariciones
 - **Tipo de cuenta valores** (tabla: Q08/VA) — 7 apariciones
 - **Test de Capacidad Financiera** (tabla: MF1301) — 3 apariciones
 - **Autorizado Banca a Distancia** (tabla: PE70) — 2 apariciones
@@ -35,9 +39,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Cantidad de titulares
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTA_UN_SOLO_TITULAR
 
-**Cobertura: 43% (3/7 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 30% (3/10 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -49,9 +56,12 @@
 ❌ Test de Capacidad Financiera
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (3/6 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 33% (3/9 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -60,8 +70,10 @@
 ✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
 
-**Cobertura: 67% (2/3 condiciones modeladas)**
+**Cobertura: 40% (2/5 condiciones modeladas)**
 **Estado: ⚠️ PARCIAL**
 
 ---
@@ -74,8 +86,11 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Cantidad de posiciones en cartera
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 33% (2/6 condiciones modeladas)**
+**Cobertura: 22% (2/9 condiciones modeladas)**
 **Estado: ❌ NO MODELADA**
 
 ---
@@ -87,9 +102,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Tipos de movimiento VA37
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 25% (2/8 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -99,9 +117,12 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (2/4 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 29% (2/7 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -115,9 +136,13 @@
 ❌ Saldo en cuenta efectivo > X€
 ❌ Cantidad de titulares
 ❌ Autorizado Banca a Distancia
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTA_UN_SOLO_TITULAR
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (4/8 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 33% (4/12 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -159,9 +184,12 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Cantidad de titulares
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTA_UN_SOLO_TITULAR
 
-**Cobertura: 50% (2/4 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 29% (2/7 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -171,9 +199,12 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (2/4 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 29% (2/7 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -184,9 +215,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Cantidad de titulares
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 25% (2/8 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -195,8 +229,11 @@
 ✅ Clasificación MIFID = M - `VALORES_TIPO_CLASIFICACION_MIFID`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 33% (1/3 condiciones modeladas)**
+**Cobertura: 17% (1/6 condiciones modeladas)**
 **Estado: ❌ NO MODELADA**
 
 ---
@@ -207,9 +244,12 @@
 ✅ Tiene cuenta de valores = >=3 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (2/4 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 29% (2/7 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -222,8 +262,11 @@
 ❌ Test de Conveniencia
 ❌ Cantidad de titulares
 ❌ Autorizado Banca a Distancia
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTA_UN_SOLO_TITULAR
 
-**Cobertura: 57% (4/7 condiciones modeladas)**
+**Cobertura: 40% (4/10 condiciones modeladas)**
 **Estado: ⚠️ PARCIAL**
 
 ---
@@ -267,9 +310,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Tipo de cuenta valores
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 25% (2/8 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -280,9 +326,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Tipo de cuenta valores
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 25% (2/8 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -292,9 +341,12 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (2/4 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 29% (2/7 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -304,9 +356,12 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (2/4 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 29% (2/7 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -317,9 +372,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Tipo de cuenta valores
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 25% (2/8 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -329,9 +387,12 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (2/4 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 29% (2/7 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -342,9 +403,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Tipo de cuenta valores
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 25% (2/8 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -354,9 +418,12 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 50% (2/4 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 29% (2/7 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -367,9 +434,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Tipo de cuenta valores
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 25% (2/8 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -389,9 +459,13 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Cantidad de titulares
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTA_UN_SOLO_TITULAR
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 22% (2/9 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -402,9 +476,13 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Cantidad de titulares
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTA_UN_SOLO_TITULAR
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 22% (2/9 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -416,8 +494,12 @@
 ❌ Saldo en cuenta efectivo > X€
 ❌ Cantidad de titulares
 ❌ Bloqueado por RIC
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTA_UN_SOLO_TITULAR
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 33% (2/6 condiciones modeladas)**
+**Cobertura: 20% (2/10 condiciones modeladas)**
 **Estado: ❌ NO MODELADA**
 
 ---
@@ -429,9 +511,12 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Cantidad de titulares
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 40% (2/5 condiciones modeladas)**
-**Estado: ⚠️ PARCIAL**
+**Cobertura: 25% (2/8 condiciones modeladas)**
+**Estado: ❌ NO MODELADA**
 
 ---
 
@@ -452,8 +537,11 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Tipo de cuenta valores
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 57% (4/7 condiciones modeladas)**
+**Cobertura: 40% (4/10 condiciones modeladas)**
 **Estado: ⚠️ PARCIAL**
 
 ---
@@ -467,8 +555,11 @@
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
 ❌ Tipo de cuenta valores
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 57% (4/7 condiciones modeladas)**
+**Cobertura: 40% (4/10 condiciones modeladas)**
 **Estado: ⚠️ PARCIAL**
 
 ---
@@ -481,8 +572,11 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 67% (4/6 condiciones modeladas)**
+**Cobertura: 44% (4/9 condiciones modeladas)**
 **Estado: ⚠️ PARCIAL**
 
 ---
@@ -495,8 +589,11 @@
 ✅ Tiene cuenta de valores = 1 - `TIENE_CUENTA_VALOR`
 ❌ Test de Conveniencia
 ❌ Saldo en cuenta efectivo > X€
+❌ VALORES.TEST_CAPACIDAD_FINANCIERA
+❌ TEST_DE_CONVENIENCIA
+❌ CUENTAS.SALDO_MAYOR_1000
 
-**Cobertura: 67% (4/6 condiciones modeladas)**
+**Cobertura: 44% (4/9 condiciones modeladas)**
 **Estado: ⚠️ PARCIAL**
 
 ---
