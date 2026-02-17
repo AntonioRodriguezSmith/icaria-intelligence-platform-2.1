@@ -1,1 +1,9 @@
 
+# Memoria del proyecto (información sensible)
+memoria_proyecto/
+
+# Entornos y artefactos comunes
+.venv/
+__pycache__/
+*.pyc
+
