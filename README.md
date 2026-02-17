@@ -1,50 +1,80 @@
+````markdown
 # ICARIA Intelligence Platform
 
-Plataforma para análisis y validación de casos, condiciones y KPIs. Este README cubre cómo ejecutar los componentes clave para desarrollo local y pruebas rápidas.
+Herramienta para analizar, validar y auditar casos, condiciones y KPIs. Este README agrupa la información global necesaria para ejecutar, probar y desarrollar los componentes principales.
 
-## Comandos rápidos
+## Estado rápido
+- Sitio local de análisis: `http://localhost:3000` (API `/analyze`).
+- Memoria persistente y reportes en `detector/matching/memory/` y `reports/`.
 
-- Levantar servicios (Docker):
+## Quickstart
+
+- Levantar servicios con Docker (si usas la orquestación):
 
 ```powershell
 docker compose up --build -d
 ```
 
-- Iniciar servidor de análisis local (Node):
+- Ejecutar el servidor de análisis (Node.js):
 
 ```powershell
 node detector/matching/analyze_server.js
 ```
 
-- Generar informe de gaps (local):
+- Generar reportes y estimador (local):
 
 ```powershell
 node detector/matching/generate_report.js
-```
-
-- Ejecutar estimador de roadmap:
-
-```powershell
 node detector/tools/estimator.js
 ```
 
-## Endpoint `/analyze` (uso rápido)
+## Uso del endpoint `/analyze`
 
-- POST JSON: `{ "text": "<texto del caso>" }` a `http://localhost:3000/analyze`
-- Si `API_TOKEN` está configurado, enviar `Authorization: Bearer <token>`.
-- Resultado: JSON con `stats`, `casos` y `memory_counts` guardados en `detector/matching/memory/` y `reports/report-latest-from-api.json`.
+- POST JSON a `http://localhost:3000/analyze` con el body:
 
-## Dónde mirar código clave
+```json
+{ "text": "<texto del caso>" }
+```
 
-- Motor de matching: `detector/matching/matching_engine.js` (contiene heurísticos y detecciones)
-- Catálogo de condiciones: `detector/matching/condiciones_icaria.js`
-- Server API: `detector/matching/analyze_server.js`
-- Generador de reportes: `detector/matching/generate_report.js`
-- Memoria persistente: `detector/matching/memory/`
+- Autenticación: si está configurada la variable `API_TOKEN`, enviar cabecera `Authorization: Bearer <token>`.
+- Respuesta: JSON con `stats`, `casos` y `memory_counts`. El servidor guarda memoria en `detector/matching/memory/` y escribe un `reports/report-latest-from-api.json`.
 
-## Notas rápidas
+## Estructura relevante del repositorio
 
-- Heurísticos portados desde Python para detección rápida: Test CF, Test TC, cuenta un solo titular, saldo >= 1000€.
-- Mantener la distinción entre tablas (datos) y condiciones (reglas que consultan tablas).
+- `detector/matching/` — motor de matching, parser, catálogo y server API.
+  - `matching_engine.js` — análisis y heurísticos.
+  - `condiciones_icaria.js` — catálogo de condiciones.
+  - `analyze_server.js` — servidor HTTP que expone `/analyze`.
+  - `generate_report.js` — script para generar reportes human-readable y JSON.
+  - `memory/` — persistencia de casos y contadores (no subir a git).
+- `detector/tools/estimator.js` — heurística/estimador para priorizar gaps y generar roadmap.
+- `docs/` — guías rápidas, mockups y documentación adicional.
 
-Para más detalles técnicos y uso avanzado consultad `detector/matching/README.md` y `docs/USAGE_QUICK.md`.
+## Desarrollo y tests
+
+- Tests Python (módulo detector_texto):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r detector_texto/requirements.txt
+pytest detector_texto/tests -q
+```
+
+- Nota: no todos los componentes tienen tests JS automatizados; se recomienda añadir `mocha`/`chai` para heurísticos.
+
+## Buenas prácticas
+
+- Mantener `detector/matching/memory/` fuera del control de versiones (está en `.gitignore`).
+- Para producción, reemplazar la persistencia por una base de datos o storage compartido.
+
+## Documentación específica
+
+Consulta la documentación de módulo en `detector/matching/README.md` y la guía rápida de Space en `docs/USAGE_QUICK.md`.
+
+## Contribuir
+
+- Abrir issues para bugs o propuestas.
+- Crear pull requests contra `main` con descripción clara y pasos para reproducir.
+
+````
