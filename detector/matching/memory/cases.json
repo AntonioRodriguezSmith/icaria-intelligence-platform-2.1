@@ -109,4 +109,58 @@
     "condicionesNoModeladas": [],
     "timestamp": "2026-02-17T12:39:50.939Z"
   }
+  ,
+  {
+    "id": "manual_case_1",
+    "text": "Caso 1 - Análisis manual proporcionado por usuario: 7 condiciones evaluadas.",
+    "stats": {
+      "total": 7,
+      "conDatos": 7,
+      "sinDatos": 0,
+      "coberturaProm": 43,
+      "modeladas": 3,
+      "parciales": 0,
+      "noModeladas": 4
+    },
+    "condicionesModeladas": [
+      { "codigo": "ES_PERSONA_FISICA", "descripcion": "Usuario Particular" },
+      { "codigo": "VALORES_TIPO_CLASIFICACION_MIFID", "descripcion": "MIFID firmado como minorista" },
+      { "codigo": "TIENE_CUENTA_VALOR", "descripcion": "Cuenta valores existente" }
+    ],
+    "condicionesNoModeladas": [
+      { "codigo": "TEST_CF", "descripcion": "Test de Capacidad Financiera" },
+      { "codigo": "TEST_TC", "descripcion": "Test de Conveniencia (COMPLEJOS y CONVENIENTE)" },
+      { "codigo": "SALDO_DV01", "descripcion": "Saldo en cuenta efectivo > X€ (original: Saldo > 1.000€)" },
+      { "codigo": "CANTIDAD_TITULARES", "descripcion": "Cantidad de titulares (original: Un solo titular)" }
+    ],
+    "coverageSummary": "3/7",
+    "timestamp": "2026-02-17T14:20:00.000Z"
+  },
+  {
+    "id": "manual_case_2",
+    "text": "Caso 2 - Análisis manual proporcionado por usuario: 8 condiciones evaluadas.",
+    "stats": {
+      "total": 8,
+      "conDatos": 8,
+      "sinDatos": 0,
+      "coberturaProm": 38,
+      "modeladas": 3,
+      "parciales": 0,
+      "noModeladas": 5
+    },
+    "condicionesModeladas": [
+      { "codigo": "ES_PERSONA_FISICA", "descripcion": "Usuario Particular" },
+      { "codigo": "VALORES_TIPO_CLASIFICACION_MIFID", "descripcion": "MIFID firmado como minorista" },
+      { "codigo": "TIENE_CUENTA_VALOR", "descripcion": "Tiene cuentas de valores" }
+    ],
+    "condicionesNoModeladas": [
+      { "codigo": "CF", "descripcion": "Test de Capacidad Financiera" },
+      { "codigo": "TC_COMPLEJOS_CONVENIENTE", "descripcion": "Test de Conveniencia (COMPLEJOS y CONVENIENTE)" },
+      { "codigo": "CANT_CUENTAS_PARAM", "descripcion": "2 cuentas de valores (parametrizar cantidad)" },
+      { "codigo": "POSICION_Q48", "descripcion": "Posición en cuenta según Q48" },
+      { "codigo": "SALDO_DV01_EUR_GT_1000", "descripcion": "Saldo > 1.000€ en EUROS (DV01)" }
+    ],
+    "coverageSummary": "3/8",
+    "timestamp": "2026-02-17T14:20:10.000Z"
+  }
 ]
