@@ -43,162 +43,30 @@ Plataforma digital para analizar y validar operaciones, riesgos y cumplimiento n
 │   ├── casos_avanzados.md
 │   └── casos_test.md
 └── .env                        # Configuración de entorno
-```
+# Detector de Texto – ICARIA Intelligence Platform
 
----
+Este módulo permite analizar, detectar y procesar automáticamente texto relevante en documentos, mensajes o registros del banco.
 
-## 🔎 Documentación principal
+## Funcionalidad
 
-- [Memoria y normas operativas](docs/MEMORIA_AGENTE_ICARIA.md)
-- [Guía rápida](docs/Guia_Rapida.md)
-- [Checklist onboarding y calidad](docs/checklist-equipo.md)
-- [Historial de decisiones y chat](docs/memoria_chat.md)
+- Detección automática de palabras clave, riesgos o anomalías.
+- Integrable con el agente ICARIA y con otros módulos.
+- Auditado y documentado conforme a la memoria central.
 
----
+## Documentación
 
-## ⚡ Onboarding para el equipo
+- Reglas operativas: `memoria_detector.md`
+- Casos de test y ejemplos: `tests/`
+- Resultados y logs: `logs/` (opcional)
 
-1. **Clona el repo:**
-    ```bash
-    git clone https://github.com/AntonioRodriguezSmith/icaria_intelligence_platform_1.2.git
-    cd icaria_intelligence_platform_1.2
-    ```
-2. **Instala Docker Desktop** y asegúrate de que está activo.
-3. **Levanta los servicios:**
-    ```bash
-    docker-compose up -d
-    ```
-4. **Consulta la guía rápida y la memoria central** en `/docs`.
-5. **Registra tus decisiones y contribuciones** en la memoria y el chat.
-6. **Revisa el checklist-equipo** antes de cada entrega o validación.
+## Integración
 
----
+- El agente ICARIA puede llamar a este módulo vía API, script o servicio interno.
+- Toda evolución se audita también en la memoria central de ICARIA.
 
-## 🧪 Validación y testeo con Postman
+## Contacto
 
-- Endpoints del MCP Server documentados en `docs/Guia_Rapida.md`
-- Importa la colección desde `/docs` o crea una nueva:
-     - URL base: `http://localhost:8080`
-     - Ejemplo de endpoint: `/api/validate`
-     - Prueba operaciones de validación y consulta.
-
----
-
-## 🔀 CI/CD & GitHub Actions
-
-- Automatización de test, backups y releases gestionada en GitHub Actions.
-- Revisa o adapta el workflow en `.github/workflows/`.
-- Cada push valida la estructura y la documentación con scripts de auditoría.
-
----
-
-## 👥 Equipo
-
-- **Coordinador:** AntonioRodriguezSmith
-- **Colaboradores:** DXC-TDM, Banco Sabadell
-- **Responsable de Agente:** Documentado en memoria
-
----
-
-## 📝 Calidad y auditoría
-
-- Documenta decisiones y cambios en `docs/MEMORIA_AGENTE_ICARIA.md` y `docs/memoria_chat.md`.
-- Revisa el checklist antes de cada entrega.
-
----
-
-## 🛠️ Soporte
-
-Consulta la memoria central, habla con el coordinador, o revisa el historial en el chat.
-
----
-
-## 🏛️ Legal y normativo
-
-- Este proyecto es propiedad de Banco Sabadell y DXC-TDM.
-- Uso privado, auditado y normativo.
-- Cumplimiento RGPD, LOPD y regulaciones bancarias vigentes.
-- Las reglas y casos de negocio deben cumplir la normativa interna y externa.
-
----
-
-## ✍️ Ejemplo de primer Pull Request
-
-1. **Crea una rama con tu feature o mejora**:
-    ```bash
-    git checkout -b mejora/nueva-regla-KPI
-    ```
-2. **Agrega o modifica archivos** en `reglas/`, `casos/` o `docs/MEMORIA_AGENTE_ICARIA.md`.
-3. **Haz commit y push**:
-    ```bash
-    git add .
-    git commit -m "Nueva regla KPI para validación de saldos"
-    git push origin mejora/nueva-regla-KPI
-    ```
-4. **Abre un Pull Request en GitHub** seleccionando tu rama.
-5. **Detalla tu aportación, regla o caso en la descripción del PR**.
-6. **Solicita review al responsable/QA y espera feedback**.
-
----
-
-## 🧠 Recuerda
-
-- **Para cualquier operación, consulta siempre [`docs/MEMORIA_AGENTE_ICARIA.md`](docs/MEMORIA_AGENTE_ICARIA.md).**
-- La memoria central es la fuente de verdad operativa, técnica y normativa.
-
----
-
-**Para cualquier operación, consulta siempre [`docs/MEMORIA_AGENTE_ICARIA.md`](docs/MEMORIA_AGENTE_ICARIA.md).**
-
-# ICARIA Intelligence Platform
-
-Espacio colaborativo con memoria persistente y agente IA en GitHub Copilot Space, para la gestión, auditoría y validación de condiciones de negocio, casos, KPIs y normativas en Banco Sabadell.  
-Este proyecto integra Agent Copilot, estructura documental robusta y controles de calidad para todo el equipo.
-
----
-
-## 🚀 ¿Qué es ICARIA?
-
-ICARIA es un ecosistema digital para analizar y validar operaciones, riesgos y cumplimiento normativo del banco, con:
-- Agente IA persistente conectado al Space.
-- Memoria centralizada (auditoría y trazabilidad).
-- Infraestructura Docker.
-- Reglas, KPIs y casos colaborativos.
-
----
-
-## 📂 Estructura del proyecto
-
-```
-/
-├── docker-compose.yml           # Orquestación y levantamiento de servicios
-├── agents/                     # Configuración avanzada del agente
-│   └── icaria-agent-config.yaml
-├── docs/                       # Memoria central, guías, historial y checklist
-│   ├── MEMORIA_AGENTE_ICARIA.md
-│   ├── Guia_Rapida.md
-│   ├── checklist-equipo.md
-│   └── memoria_chat.md
-├── reglas/                     # Reglas y KPIs normativos
-
-│   ├── kpis.md
- 
----
-
-## 🗣️ Resumen de la conversación y acciones pendientes
-
-- En la conversación inicial proporcionaste un enlace externo a GitHub: https://github.com/copilot/c/c0640cc3-7ff0-408d-9477-46d19496f51c
-- Pregunté si querías clonar o revisar ese repositorio; pediste "revisa la conversación" y luego "contrasta este proyecto con la conversación y añade lo que falte".
-
-Acciones pendientes que he añadido a este `README` para visibilidad:
-
-- **Clonar / Revisar el repo externo:** decidir si debemos clonar el enlace anterior y comparar su contenido con este proyecto.
-- **Ejecutar tests locales:** hay tests de ejemplo en `detector_texto/tests/test_detector.py`; incluyo instrucciones rápidas abajo.
-- **Validar endpoints / integración:** si quieres que integre o pruebe APIs expuestas por el proyecto o por el repo externo, indícalo.
-
-Si quieres que haga cualquiera de estas acciones ahora, dime cuál y lo ejecuto (clonar, listar archivos, buscar funciones, ejecutar tests, etc.).
-
----
+- Responsable: [tu nombre o grupo]
 
 ## 🧪 Cómo ejecutar los tests (rápido)
 
