@@ -1,0 +1,235 @@
+conditions:
+  - dominio: PERSONA
+    nombre: DOC_VIGENTE
+    descripcion: "Documento vigente, no caducado (>15 días de validez)"
+  - dominio: PERSONA
+    nombre: SI_IDENTIFICACION_DIGITALIZADA
+    descripcion: "Identificación digitalizada"
+  - dominio: PERSONA
+    nombre: NO_IDENTIFICACION_DIGITALIZADA
+    descripcion: "Identificación no digitalizada"
+  - dominio: PERSONA
+    nombre: SI_TIENE_TLF_INFORMADO
+    descripcion: "Persona tiene teléfono informado"
+  - dominio: PERSONA
+    nombre: ES_PERSONA_MAYOR_18
+    descripcion: "Persona mayor de 18 años"
+  - dominio: PERSONA
+    nombre: ES_PERSONA_FISICA
+    descripcion: "Es persona física"
+  - dominio: PERSONA
+    nombre: ES_AUTONOMO
+    descripcion: "Es autónomo"
+  - dominio: PERSONA
+    nombre: ES_PERSONA_JURIDICA
+    descripcion: "Es persona jurídica"
+  - dominio: PERSONA
+    nombre: SI_TIENE_EMAIL_INFORMADO
+    descripcion: "Persona tiene email informado"
+  - dominio: PERSONA
+    nombre: NO_TIENE_EMAIL_INFORMADO
+    descripcion: "Persona no tiene email informado"
+  - dominio: PERSONA
+    nombre: ES_PERSONA_VIVA
+    descripcion: "La persona está viva o la sociedad sigue activa"
+  - dominio: PERSONA
+    nombre: DOC_CADUCADO
+    descripcion: "Persona con documento caducado"
+  - dominio: PERSONA
+    nombre: TIPO_DE_IDENTIFICACION
+    descripcion: "Tipo de identificación (DNI,NIE,CIF,TIE,PASAPORTE)"
+  - dominio: PERSONA
+    nombre: ES_PERSONA_FISICA_RESIDENTE
+    descripcion: "Es persona física residente"
+  - dominio: CUENTAS
+    nombre: TIENE_CUENTA_VISTA
+    descripcion: "Tiene cuenta vista"
+  - dominio: CUENTAS
+    nombre: TIENE_MAS_DE_X_CUENTAS_VISTA_PARAMETRO
+    descripcion: "Tiene más de X cuentas vista (parámetro)"
+  - dominio: CUENTAS
+    nombre: TIENE_IGUAL_CUENTAS_VISTA_PARAMETRO
+    descripcion: "Tiene un número de cuentas vista (parámetro)"
+  - dominio: CUENTAS
+    nombre: TIENE_MENOS_DE_X_CUENTAS_VISTA_PARAMETRO
+    descripcion: "Tiene menos de X cuentas vista (parámetro)"
+  - dominio: CUENTAS
+    nombre: NO_TIENE_CUENTA_VISTA
+    descripcion: "No tiene cuenta vista"
+  - dominio: CUENTAS
+    nombre: TIENE_MOVIMIENTOS_EN_CUENTA
+    descripcion: "Tiene movimientos en cuenta en los últimos 6 meses"
+  - dominio: CUENTAS
+    nombre: NO_TIENE_MOVIMIENTOS_EN_CUENTA
+    descripcion: "No tiene movimientos en cuenta"
+  - dominio: CUENTAS
+    nombre: TIENE_MAS_DE_X_MOV_EN_CUENTA_PARAMETRO
+    descripcion: "Tiene más de X movimientos en cuenta (parámetro) en los últimos 6 meses"
+  - dominio: CUENTAS
+    nombre: TIENE_MENOS_DE_X_MOV_EN_CUENTA_PARAMETRO
+    descripcion: "Tiene menos de X movimientos en cuenta (parámetro) en los últimos 6 meses"
+  - dominio: BDIS_PARTICULAR
+    nombre: TIENE_BANCA_A_DISTANCIA
+    descripcion: "Tiene banca a distancia"
+  - dominio: BDIS_PARTICULAR
+    nombre: NO_TIENE_BANCA_A_DISTANCIA
+    descripcion: "No tiene banca a distancia"
+  - dominio: LINEA_CREDITO
+    nombre: TIENE_LINEA_EXPANSION_ACTIVA
+    descripcion: "Tiene línea de crédito activa"
+  - dominio: LINEA_CREDITO
+    nombre: NO_TIENE_LINEA_EXPANSION_ACTIVA
+    descripcion: "No tiene línea de crédito activa"
+  - dominio: LINEA_CREDITO
+    nombre: TIENE_IGUAL_X_LINEAS_EXPANSION
+    descripcion: "Tiene X líneas de crédito activas"
+  - dominio: CUENTAS
+    nombre: TIENE_CUENTA_CIALP
+    descripcion: "Tiene cuenta de ahorro CIALP"
+  - dominio: CUENTAS
+    nombre: NO_TIENE_CUENTA_CIALP
+    descripcion: "No tiene cuenta de ahorro CIALP"
+  - dominio: TRABAS
+    nombre: TIENE_CONTRATOS_ACTIVOS_CON_TRABAS
+    descripcion: "Tiene algún contrato activo con trabas"
+  - dominio: TRABAS
+    nombre: NO_TIENE_CONTRATOS_ACTIVOS_CON_TRABAS
+    descripcion: "No tiene ningún contrato activo con trabas"
+  - dominio: CUENTAS
+    nombre: TIPO_SALDO_DV_PARAMETRIZADO
+    descripcion: "Saldo cuenta vista (negativo/positivo/indiferente)"
+  - dominio: PLANES
+    nombre: TIENE_PLANES_PENSIONES_PARTICULARES
+    descripcion: "Tiene plan de pensiones particular"
+  - dominio: PLANES
+    nombre: NO_TIENE_PLAN_DE_PENSIONES
+    descripcion: "No tiene plan de pensiones particular"
+  - dominio: AVISOS_Y_ALERTAS
+    nombre: ES_TITULAR_ACTIVO_AVISOS_ALERTAS
+    descripcion: "Tiene contrato activo de avisos y alertas"
+  - dominio: AVISOS_Y_ALERTAS
+    nombre: NO_TIENE_CONTRATO_AA
+    descripcion: "No tiene contrato activo de avisos y alertas"
+  - dominio: VALORES
+    nombre: VALORES_TIPO_CLASIFICACION_MIFID
+    descripcion: "Tiene tipo de clasificación MIFID parametrizable"
+  - dominio: CUENTAS
+    nombre: TIENE_CUENTA_VISTA_INACTIVA
+    descripcion: "Tiene cuenta vista inactiva"
+  - dominio: BDIS_PARTICULAR
+    nombre: TIPO_DE_FIRMA_DIGITAL_BSO
+    descripcion: "Tipo de firmas digitales por parámetro (VPTC1, VPTC2, etc.)"
+  - dominio: BDIS_EMPRESAS
+    nombre: TIENE_BANCA_A_DISTANCIA_EMPRESA
+    descripcion: "Tiene banca a distancia empresa activa"
+  - dominio: PLANES
+    nombre: TIENE_BANCA_A_DISTANCIA_PLAN_PENSIONES
+    descripcion: "Tiene banca a distancia activa para plan de pensiones"
+  - dominio: PLANES
+    nombre: TIENE_PLANES_PREVISION_ASEGURADOS
+    descripcion: "Tiene plan de previsión asegurado"
+  - dominio: CUENTAS
+    nombre: TIENE_FIRMA_EN_CONTRATO
+    descripcion: "Tiene firma conjunta o individual en contrato"
+  - dominio: CUENTAS
+    nombre: TIENE_CUENTA_VISTA_EMPRESA
+    descripcion: "Tiene cuenta vista empresa"
+  - dominio: TARJETA
+    nombre: TIENE_TIPO_APLICACION_MOVIL_TARJETA
+    descripcion: "Tiene tarjeta activa en wallet de app móvil (Apple Pay, Google Pay, etc.)"
+  - dominio: TARJETA
+    nombre: TIENE_TARJETA_PAGO_ACTIVA
+    descripcion: "Tiene tarjetas activas de tipo y titularidad parametrizable"
+  - dominio: TARJETA
+    nombre: TIENE_IGUAL_TARJETAS_PAGO_ACTIVA
+    descripcion: "Tiene X tarjetas activas (parámetro) de tipo y titularidad parametrizable"
+  - dominio: TARJETA
+    nombre: TIENE_MENOS_DE_X_TARJETAS_PAGO_ACTIVA
+    descripcion: "Tiene menos de X tarjetas activas (parámetro) de tipo y titularidad parametrizable"
+  - dominio: TARJETA
+    nombre: TIENE_MAS_DE_X_TARJETAS_PAGO_ACTIVA
+    descripcion: "Tiene más de X tarjetas activas (parámetro) de tipo y titularidad parametrizable"
+  - dominio: TARJETA
+    nombre: NO_TIENE_TARJETA_PAGO
+    descripcion: "No tiene tarjetas (crédito, débito, mixta, prepago)"
+  - dominio: TARJETA
+    nombre: TIENE_MOVIMIENTO_TARJETA
+    descripcion: "Tiene movimientos en tarjeta (crédito, mixta o prepago)"
+  - dominio: TARJETA
+    nombre: SALDO_DISPONIBLE_TARJETA_PAGO
+    descripcion: "Tiene saldo disponible en la tarjeta"
+  - dominio: TARJETA
+    nombre: TIENE_TARJETA_MOVIMIENTO_CONFIRMADO
+    descripcion: "Tiene movimientos en estado confirmados en tarjetas (crédito, mixta o prepago)"
+  - dominio: TARJETA
+    nombre: TIENE_TARJETA_MOVIMIENTO_PENDIENTE
+    descripcion: "Tiene movimientos en estado pendiente en tarjetas (crédito, mixta o prepago)"
+  - dominio: BDIS_TARJETAS_SECUNDARIAS
+    nombre: TIENE_TARJETA_FIRMA_SECUNDARIA_PF_PARTICULARES
+    descripcion: "Tiene tarjetas secundarias de particulares activas"
+  - dominio: CUENTAS
+    nombre: MOVIMIENTOS_DOC_ASOCIADO
+    descripcion: "Tiene documento adjunto al movimiento"
+  - dominio: TARJETA
+    nombre: ES_AUTONOMO_TARJ_ENTREGADA_VIGENTE_ACT
+    descripcion: "Es autónomo con tarjeta entregada, vigente y con firma"
+  - dominio: SEGUROS
+    nombre: TIENE_SEGURO_VIDA
+    descripcion: "Tiene seguro de vida"
+  - dominio: SEGUROS
+    nombre: TIENE_SEGURO_HOGAR
+    descripcion: "Tiene seguro de hogar"
+  - dominio: CUENTAS
+    nombre: TIENE_CUENTA_VALOR
+    descripcion: "Tiene cuenta valor"
+  - dominio: CUENTAS
+    nombre: TIENE_CUENTA_AHORRO
+    descripcion: "Tiene cuenta ahorro"
+  - dominio: CUENTAS
+    nombre: TIENE_MOVIMIENTOS_CUENTA_FECHA
+    descripcion: "Número de movimientos en cuenta en una fecha menor a (parámetro en días)"
+  - dominio: TARJETA
+    nombre: TIENE_TARJETA_CREDITO_ACTIVA
+    descripcion: "Tiene tarjetas activas de crédito y tipo y titularidad parametrizable"
+  - dominio: TARJETA
+    nombre: TIENE_TARJETA_DEBITO_ACTIVA
+    descripcion: "Tiene tarjetas activas de débito y tipo y titularidad parametrizable"
+  - dominio: CUENTAS
+    nombre: TIENE_MOVIMIENTOS_X_DIAS
+    descripcion: "Movimientos en cuenta desde (parámetro en días)"
+  - dominio: CUENTAS
+    nombre: TIENE_MAS_DE_X_CUENTAS_VISTA_EMPRESA_PARAMETRO
+    descripcion: "Tiene más de X cuentas vista empresa (parámetro)"
+  - dominio: CUENTAS
+    nombre: TIENE_IGUAL_CUENTAS_VISTA_EMPRESA_PARAMETRO
+    descripcion: "Tiene un número de cuentas vista empresa (parámetro)"
+  - dominio: BDIS_AUTONOMOS
+    nombre: TIENE_BANCA_A_DISTANCIA_AUTONOMO
+    descripcion: "Tiene banca a distancia autónomo activa"
+  - dominio: BDIS_PARTICULAR
+    nombre: SOLO_CONTRATOS_BDIS_AA
+    descripcion: "Solo tiene contratos de banca distancia o avisos y alertas"
+  - dominio: PRODUCTO
+    nombre: TIENE_HIPOTECA
+    descripcion: "Tiene hipoteca activa"
+  - dominio: CUENTAS
+    nombre: TIENE_MENOS_DE_X_CUENTAS_VISTA_EMPRESA_PARAMETRO
+    descripcion: "Tiene menos de X cuentas vista empresa (parámetro)"
+  - dominio: PRODUCTO
+    nombre: TIENE_PRESTAMO_ACTIVO
+    descripcion: "Tiene préstamo activo"
+  - dominio: SEGUROS
+    nombre: TIENE_SEGURO_AHORRO_SABADELL
+    descripcion: "Tiene seguro ahorro Sabadell"
+  - dominio: CUENTAS
+    nombre: TIENE_TIPO_MOVIMIENTO_CUENTA
+    descripcion: "Tipo de movimientos en cuenta"
+  - dominio: BDIS_EMPRESAS
+    nombre: NO_TIENE_BANCA_A_DISTANCIA_EMPRESA
+    descripcion: "No tiene banca a distancia empresa"
+  - dominio: CUENTAS
+    nombre: TIENE_CUENTA_SALDO_RETENIDO
+    descripcion: "Tiene cuenta vista activa con saldo retenido"
+  - dominio: CUENTAS
+    nombre: TIENE_BLOQUEO_CUENTA_VISTA
+    descripcion: "Tiene cuenta vista bloqueada"
