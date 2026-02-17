@@ -1,0 +1,19 @@
+/*
+  Paleta de colores - Banco Sabadell
+  Uso: importar este archivo en las maquetas y componentes CSS
+*/
+:root{
+  --sabadell-azul-principal: #0072CE; /* Header, botones primarios */
+  --sabadell-azul-oscuro:   #003D6B; /* Navbar, títulos */
+  --sabadell-azul-claro:    #4DA6E8; /* Hover, selección */
+  --sabadell-verde:         #00A651; /* Éxito, barras de progreso altas */
+  --sabadell-naranja:       #FF8200; /* Advertencia, ALTA criticidad */
+  --sabadell-rojo:          #E31E24; /* Error, CRÍTICA */
+  --sabadell-gris-claro:    #F5F5F5; /* Fondos de cards */
+  --sabadell-gris-oscuro:   #333333; /* Textos */
+}
+
+/* Helpers */
+.sabadell-bg { background: var(--sabadell-gris-claro); }
+.sabadell-primary { color: var(--sabadell-azul-principal); }
+.sabadell-btn { background: var(--sabadell-azul-principal); color: white; border-radius:6px; padding:6px 10px }
