@@ -1,14 +1,20 @@
 version: '3.9'
 services:
   mcp-server:
-    image: mcp-server:latest
+    build: ./mcp
     container_name: mcp-server
     ports:
-      - "8080:8080"
+      - "8080:8000"
     volumes:
       - ./data:/app/data
     environment:
       - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   agent-icaria:
     build: ./agents

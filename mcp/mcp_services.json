@@ -1,0 +1,17 @@
+{
+  "Stdio": [
+    "python D:/ruta/a/tu/mcp_server.py"
+  ],
+  "SSE": [
+    "http://localhost:8000/sse"
+  ],
+  "StreamableHttp": [
+    {
+      "url": "https://example.com/mcp",
+      "requestHeaders": {
+        "Authorization": "Bearer TU_TOKEN_AQUI",
+        "Content-Type": "application/json"
+      }
+    }
+  ]
+}
