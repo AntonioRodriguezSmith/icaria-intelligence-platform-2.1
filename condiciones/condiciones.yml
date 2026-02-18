@@ -233,3 +233,5 @@ conditions:
   - dominio: CUENTAS
     nombre: TIENE_BLOQUEO_CUENTA_VISTA
     descripcion: "Tiene cuenta vista bloqueada"
+    nombre: ES_DE_UNA_COMUNIDAD_AUTONOMA_PARAMETRO
+    descripcion: "Es de una comunidad autonoma parametro"
