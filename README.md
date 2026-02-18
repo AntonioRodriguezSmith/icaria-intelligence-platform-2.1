@@ -77,4 +77,21 @@ Consulta la documentación de módulo en `detector/matching/README.md` y la guí
 - Abrir issues para bugs o propuestas.
 - Crear pull requests contra `main` con descripción clara y pasos para reproducir.
 
+## Checklist (estado de trabajo)
+
+- **Plan: Conectar repo al Copilot Space**: pendiente
+- **Verificar repo en GitHub y permisos**: pendiente
+- **Probar servidor localmente (Node)**: pendiente
+- **Agregar `start` script / `Dockerfile` opcional**: pendiente (se pueden generar con `npm init -y` y `Dockerfile` en `/detector`)
+- **Crear Space en GitHub Copilot y vincular repositorio**: pendiente
+- **Configurar secretos/variables (`API_TOKEN`)**: pendiente
+- **Desplegar Space y probar endpoint `/analyze`**: pendiente
+- **Verificar logs y persistencia (`memory/` y `reports/`)**: pendiente
+- **Tareas completadas**:
+  - Listado y revisión de condiciones modeladas (`condiciones/condiciones.yml` y `detector/matching/condiciones_icaria.js`)
+  - Mostrar ejemplos de casos y generación de reportes locales
+  - Inclusión de dos casos manuales (`manual_case_1`, `manual_case_2`) en `detector/matching/memory/cases.json`
+
+Si quieres que haga commits de los cambios locales (catálogo, memoria o README), confirma y procederé.
+
 ````
